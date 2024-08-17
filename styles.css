@@ -6,10 +6,11 @@ body {
     box-sizing: border-box;
     color: #333;
     line-height: 1.6;
-    background-color: #f4f4f4;
-    font-size: 18px; /* Increased base font size */
+    background-color: #f0f0f0; /* Light background */
+    font-size: 18px;
 }
 
+/* Container */
 .container {
     width: 90%;
     max-width: 1200px;
@@ -18,10 +19,12 @@ body {
 
 /* Header Styles */
 header {
-    background-color: #222;
+    background-color: #1a1a1a;
     color: white;
     padding: 1rem 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+    position: relative;
+    z-index: 1000; /* Ensure it stays on top */
 }
 
 header .container {
@@ -30,70 +33,68 @@ header .container {
     align-items: center;
 }
 
-header .logo {
-    font-size: 1.8rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    padding: 0 1rem; /* Added padding around the logo */
+header .logo img {
+    border-radius: 50%;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+header .logo img:hover {
+    transform: rotate(360deg);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    gap: 1.5rem;
+    gap: 2rem;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
     padding: 0.5rem 1rem;
-    transition: background-color 0.3s, color 0.3s, text-decoration 0.3s;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s, text-shadow 0.3s;
 }
 
 nav ul li a:hover {
     background-color: #ff6200;
     color: #fff;
-    border-radius: 5px;
-    text-decoration: underline; /* Underline effect on hover */
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Subtle glow effect */
 }
 
 nav .cta {
     background: linear-gradient(45deg, #ff6200, #e06315);
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
+    padding: 0.7rem 1.5rem;
+    border-radius: 25px;
     color: white;
     text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
     transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
-    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3); /* Added box-shadow */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
 
 nav .cta:hover {
-    background: linear-gradient(45deg, #b94a05, #b14909);
-    transform: translateY(-2px) scale(1.05);
+    background: linear-gradient(45deg, #e06315, #b94a05);
+    transform: translateY(-3px) scale(1.05);
 }
 
+/* Menu Toggle Button */
 .menu-toggle {
     display: none;
-    background-color: #ff6200;
-    color: white;
-    border: none;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s;
 }
-
-.menu-toggle:hover {
-    background-color: #ff6200;
-}
-
 /* Hero Section Styles */
 .hero {
-    background: url('https://i.ibb.co/z88ZYLb/IT-Services-and-06530cae-3536-4056-b872-8726b123dfa2.png') no-repeat center center/cover;
+    background: url('https://i.ibb.co/z88ZYLb/IT-Services-and-06530cae-3536-4056-b872-8726b123dfa2.png') no-repeat center center;
+    background-size: cover; /* Ensure it covers the section but can adjust size */
+    background-position: center center; /* Center the image */
     color: white;
     text-align: center;
-    padding: 5rem 0;
+    padding: 8rem 0; /* More padding for emphasis */
     position: relative;
     z-index: 1;
+    overflow: hidden;
 }
 
 .hero::before {
@@ -103,7 +104,7 @@ nav .cta:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.6); /* Increased opacity */
+    background: rgba(0, 0, 0, 0.6); /* Darker overlay */
     z-index: -1;
 }
 
@@ -116,291 +117,277 @@ nav .cta:hover {
 }
 
 .hero h1 {
-    font-size: 3.5rem;
-    margin-bottom: 1rem;
+    font-size: 4rem; /* Adjusted font size */
+    margin-bottom: 1.5rem;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #E0E0E0;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    animation: fadeIn 1s ease-out;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    letter-spacing: 4px;
+    color: #f9f9f9;
+    text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+    animation: fadeInUp 1.2s ease-out;
 }
 
 .hero p {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
+    font-size: 1.4rem; /* Adjusted font size */
+    margin-bottom: 2.5rem;
+    max-width: 600px;
+    color: #e0e0e0;
 }
 
 .hero .cta {
-    background-color: #ff6200;
-    padding: 1rem 2rem;
-    border-radius: 5px;
+    background: #ff6200;
+    padding: 1.2rem 2.5rem;
+    border-radius: 25px;
     color: white;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     text-transform: uppercase;
+    font-weight: bold;
     transition: background-color 0.3s, transform 0.3s;
 }
 
 .hero .cta:hover {
-    background-color: #ff6200;
-    transform: translateY(-2px);
+    background: #e06315;
+    transform: translateY(-3px);
 }
+
 
 /* Key Services Styles */
 .key-services {
-    padding: 4rem 0;
+    padding: 6rem 0; /* More padding */
     background-color: #fff;
     text-align: center;
 }
 
 .key-services h2 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
+    font-size: 4rem; /* Larger heading */
+    margin-bottom: 2.5rem;
     text-transform: uppercase;
     color: #ff6200;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .services-grid {
     display: flex;
-    gap: 2rem;
+    gap: 3rem; /* Larger gap */
     justify-content: center;
     flex-wrap: wrap;
 }
 
 .service {
     text-align: center;
-    max-width: 300px;
-    transition: transform 0.3s, box-shadow 0.3s;
+    max-width: 350px;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
 }
 
 .service:hover {
     transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: #f0f0f0; /* Background color change on hover */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+    background-color: #f9f9f9;
 }
 
 .service img {
-    width: 100px;
-    height: 100px;
-    margin-bottom: 1rem;
+    width: 150px; /* Larger image */
+    height: 150px;
+    margin-bottom: 1.5rem;
     transition: transform 0.3s;
 }
 
 .service:hover img {
-    transform: scale(1.1); /* Image scales up on hover */
+    transform: scale(1.2);
 }
 
 .service h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.8rem; /* Larger heading */
+    margin-bottom: 0.75rem;
     color: #007BFF;
     background: linear-gradient(45deg, #007BFF, #28a745);
     -webkit-background-clip: text;
     background-clip: text;
-    -webkit-text-fill-color: transparent; /* Gradient text */
+    -webkit-text-fill-color: transparent;
 }
 
 .service p {
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: #555;
 }
 
 /* Testimonials Styles */
 .testimonials {
-    background-color: #f9f9f9;
-    padding: 4rem 0;
+    background-color: #f8f8f8;
+    padding: 6rem 0; /* More padding */
 }
 
 .testimonials h2 {
     text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
+    font-size: 4rem; /* Larger heading */
+    margin-bottom: 2.5rem;
     color: #333;
 }
 
 .testimonials-grid {
     display: flex;
-    gap: 2rem;
+    gap: 3rem; /* Larger gap */
     justify-content: center;
     flex-wrap: wrap;
 }
 
 .testimonial {
     text-align: center;
-    max-width: 300px;
+    max-width: 350px;
     background-color: #fff;
-    padding: 2rem;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
+    padding: 2.5rem;
+    border-radius: 15px; /* More rounded corners */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
 }
 
 .testimonial:hover {
-    transform: translateY(-5px) rotate(-1deg);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px) rotate(-2deg);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+    background-color: #f9f9f9;
 }
 
 .testimonial img {
     border-radius: 50%;
-    width: 80px;
-    height: 80px;
-    margin-bottom: 1rem;
-    border: 2px solid #007BFF;
-    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3); /* Soft shadow on image */
+    width: 120px; /* Larger image */
+    height: 120px;
+    margin-bottom: 1.5rem;
+    border: 3px solid #007BFF;
+    box-shadow: 0 8px 20px rgba(0, 123, 255, 0.3);
 }
 
 .testimonial p {
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: #666;
 }
 
 .testimonial h3 {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.5rem; /* Larger heading */
+    margin-bottom: 0.75rem;
     color: #333;
 }
 
 /* Blog Posts Styles */
 .blog-posts {
-    padding: 4rem 0;
+    padding: 6rem 0; /* More padding */
     background-color: #fff;
     text-align: center;
 }
 
 .blog-posts h2 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
+    font-size: 4rem; /* Larger heading */
+    margin-bottom: 2.5rem;
     text-transform: uppercase;
     color: #007BFF;
 }
 
 .posts-grid {
     display: flex;
-    gap: 2rem;
+    gap: 3rem; /* Larger gap */
     justify-content: center;
     flex-wrap: wrap;
 }
 
 .post {
-    max-width: 300px;
-    background-color: #fff;
-    padding: 1.5rem;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 350px;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .post:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px) rotate(-1deg);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
 }
 
 .post img {
     width: 100%;
     height: auto;
-    border-radius: 5px;
-    margin-bottom: 1rem;
+    border-radius: 10px; /* More rounded corners */
+    margin-bottom: 1.5rem;
 }
 
 .post h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    color: #333;
+    font-size: 1.6rem; /* Larger heading */
+    margin-bottom: 0.75rem;
+    color: #007BFF;
 }
 
 .post p {
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: #666;
 }
 
 /* Footer Styles */
 footer {
-    background: linear-gradient(45deg, #222, #333);
+    background-color: #1a1a1a; /* Darker footer background */
     color: white;
-    padding: 4rem 2rem; /* Increased padding for better spacing */
+    padding: 2rem 0; /* Enhanced padding */
     text-align: center;
 }
 
-footer .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-}
-
-footer .social-media {
-    display: flex;
-    gap: 2rem; /* Increased gap for better spacing */
-    justify-content: center;
-}
-
-.social-media a {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    font-size: 1.6rem; /* Slightly larger icons for better visibility */
-    color: white;
-    transition: color 0.3s, transform 0.3s;
-}
-
-.social-media a:hover {
-    color: #007BFF; /* Highlight color on hover */
-    transform: scale(1.1); /* Slight zoom effect on hover */
-}
-
-.social-media i {
-    font-size: 2rem; /* Larger icons for emphasis */
-}
-
-/* Footer Text */
 footer p {
-    font-size: 1.1rem; /* Slightly larger text for readability */
-    color: #ddd;
-    margin: 1rem 0;
+    font-size: 1rem;
+    margin: 0;
 }
 
-footer a {
-    color: #007BFF;
-    text-decoration: none;
-    transition: color 0.3s;
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
-footer a:hover {
-    text-decoration: underline;
-}
-
-.footer-links {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem; /* Increased gap for improved spacing */
-    margin-bottom: 2rem;
-}
-
-.footer-links a {
-    color: #ddd;
-    font-size: 1.1rem; /* Slightly larger font for better readability */
-    transition: color 0.3s;
-}
-
-.footer-links a:hover {
-    color: #007BFF;
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-    footer {
-        padding: 3rem 1rem; /* Adjust padding for smaller screens */
+    .menu-toggle {
+        display: block;
+        background-color: #1a1a1a;
+        color: white;
+        border: none;
+        padding: 1rem;
+        cursor: pointer;
     }
 
-    footer .container {
-        gap: 1.5rem; /* Adjusted gap for smaller screens */
+    nav ul {
+        flex-direction: column;
+        gap: 0;
+        display: none; /* Hidden by default */
     }
 
-    footer .social-media {
-        gap: 1rem; /* Reduced gap for smaller screens */
+    nav ul.show {
+        display: flex; /* Show on toggle */
+    }
+
+    .hero h1 {
+        font-size: 3rem; /* Responsive font size */
+    }
+
+    .hero .cta {
+        font-size: 1.2rem; /* Responsive font size */
+        padding: 1rem 2rem;
+    }
+
+    .services-grid, .testimonials-grid, .posts-grid {
+        flex-direction: column;
     }
 }
