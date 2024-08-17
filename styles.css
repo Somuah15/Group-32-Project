@@ -7,6 +7,7 @@ body {
     color: #333;
     line-height: 1.6;
     background-color: #f4f4f4;
+    font-size: 18px; /* Increased base font size */
 }
 
 .container {
@@ -33,6 +34,7 @@ header .logo {
     font-size: 1.8rem;
     font-weight: bold;
     text-transform: uppercase;
+    padding: 0 1rem; /* Added padding around the logo */
 }
 
 nav ul {
@@ -45,27 +47,29 @@ nav ul li a {
     color: white;
     text-decoration: none;
     padding: 0.5rem 1rem;
-    transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.3s, color 0.3s, text-decoration 0.3s;
 }
 
 nav ul li a:hover {
     background-color: #007BFF;
     color: #fff;
     border-radius: 5px;
+    text-decoration: underline; /* Underline effect on hover */
 }
 
 nav .cta {
-    background-color: #28a745;
+    background: linear-gradient(45deg, #007BFF, #0056b3);
     padding: 0.5rem 1rem;
     border-radius: 5px;
     color: white;
     text-transform: uppercase;
-    transition: background-color 0.3s, transform 0.3s;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3); /* Added box-shadow */
 }
 
 nav .cta:hover {
-    background-color: #218838;
-    transform: translateY(-2px);
+    background: linear-gradient(45deg, #0056b3, #007BFF);
+    transform: translateY(-2px) scale(1.05);
 }
 
 .menu-toggle {
@@ -99,7 +103,7 @@ nav .cta:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.6); /* Increased opacity */
     z-index: -1;
 }
 
@@ -112,10 +116,18 @@ nav .cta:hover {
 }
 
 .hero h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     margin-bottom: 1rem;
     text-transform: uppercase;
     letter-spacing: 2px;
+    color: #E0E0E0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 .hero p {
@@ -168,18 +180,27 @@ nav .cta:hover {
 .service:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f0f0f0; /* Background color change on hover */
 }
 
 .service img {
     width: 100px;
     height: 100px;
     margin-bottom: 1rem;
+    transition: transform 0.3s;
+}
+
+.service:hover img {
+    transform: scale(1.1); /* Image scales up on hover */
 }
 
 .service h3 {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
     color: #007BFF;
+    background: linear-gradient(45deg, #007BFF, #28a745);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Gradient text */
 }
 
 .service p {
@@ -218,7 +239,8 @@ nav .cta:hover {
 }
 
 .testimonial:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px) rotate(-1deg);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .testimonial img {
@@ -226,6 +248,8 @@ nav .cta:hover {
     width: 80px;
     height: 80px;
     margin-bottom: 1rem;
+    border: 2px solid #007BFF;
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3); /* Soft shadow on image */
 }
 
 .testimonial p {
@@ -294,7 +318,7 @@ nav .cta:hover {
 
 /* Footer Styles */
 footer {
-    background-color: #222;
+    background: linear-gradient(45deg, #222, #333);
     color: white;
     padding: 3rem 0;
 }
@@ -302,114 +326,67 @@ footer {
 footer .container {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     flex-wrap: wrap;
 }
 
-.footer-content {
+footer .social-media {
     display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.footer-column {
-    flex: 1;
-    margin-right: 2rem;
-    min-width: 200px;
-}
-
-footer h3 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-    color: #fff;
-}
-
-.contact-info p {
-    margin: 0.5rem 0;
-    font-size: 1rem;
+    gap: 1rem;
 }
 
 .social-media a {
-    display: block;
-    margin-bottom: 0.5rem;
-    color: #fff;
-    text-decoration: none;
-    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.2rem;
+    color: white;
     transition: color 0.3s;
 }
 
 .social-media a:hover {
-    color: #007BFF;
+    color: #007BFF; /* Change color on hover */
 }
 
-.newsletter form {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.newsletter input[type="email"] {
-    padding: 0.8rem;
-    flex: 2;
-    border: 1px solid #ccc;
-    border-radius: 5px 0 0 5px;
-    min-width: 150px;
-}
-
-.newsletter button {
-    padding: 0.8rem 1.5rem;
-    background-color: #007BFF;
-    border: none;
-    border-radius: 0 5px 5px 0;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-.newsletter button:hover {
-    background-color: #0056b3;
-    transform: translateY(-2px);
+.social-media i {
+    font-size: 1.5rem;
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-    header .container {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    
-    header nav ul {
-        display: none;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-    }
-    
-    header nav ul.show {
-        display: flex;
-    }
-    
-    .menu-toggle {
-        display: block;
-    }
-    
     .hero h1 {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
-    
+
     .hero p {
         font-size: 1.2rem;
     }
-    
-    .services-grid,
-    .testimonials-grid,
-    .posts-grid {
+
+    .services-grid, .testimonials-grid, .posts-grid {
         flex-direction: column;
-        gap: 1.5rem;
     }
-    
-    .footer-column {
-        flex: 1 0 100%;
-        margin-right: 0;
-        margin-bottom: 1rem;
+
+    .menu-toggle {
+        display: block;
     }
-}    
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        gap: 1rem;
+        background-color: #333;
+        padding: 1rem;
+    }
+
+    nav ul li {
+        text-align: center;
+    }
+
+    nav ul li a {
+        padding: 1rem;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+}
