@@ -35,7 +35,7 @@ header .container {
 header .logo {
     font-size: 2rem;
     font-weight: 700;
-    color: #00bfae;
+    color:  #ff6200;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -66,7 +66,7 @@ nav ul li a:hover {
 }
 
 nav .cta {
-    background-color: #00bfae;
+    background-color:  #ff6200;
     padding: 0.75rem 1.5rem;
     border-radius: 5px;
     color: #ffffff;
@@ -76,13 +76,13 @@ nav .cta {
 }
 
 nav .cta:hover {
-    background-color: #009e92;
+    background-color:  #d85e13;
     transform: translateY(-2px);
 }
 
 .menu-toggle {
     display: none;
-    background-color: #00bfae;
+    background-color:  #ff6200;
     color: #ffffff;
     border: none;
     padding: 0.75rem 1.5rem;
@@ -92,7 +92,7 @@ nav .cta:hover {
 }
 
 .menu-toggle:hover {
-    background-color: #009e92;
+    background-color:  #b64c0b;
 }
 
 .logo img {
@@ -118,7 +118,7 @@ main {
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
     text-align: center;
-    color: #00bfae;
+    color: #ff6200;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -182,7 +182,7 @@ main {
 .contact-form textarea:focus,
 .contact-form select:focus {
     outline: none;
-    border-color: #00bfae;
+    border-color:  #ff6200;
     box-shadow: 0 0 5px rgba(0, 191, 174, 0.3);
 }
 
@@ -191,7 +191,7 @@ main {
 }
 
 .contact-form button[type="submit"] {
-    background-color: #00bfae;
+    background-color:  #ff6200;
     color: #ffffff;
     padding: 0.8rem 2rem;
     border: none;
@@ -202,7 +202,7 @@ main {
 }
 
 .contact-form button[type="submit"]:hover {
-    background-color: #009e92;
+    background-color:  #ff6200;
     transform: translateY(-2px);
 }
 
@@ -274,9 +274,9 @@ footer .container {
 footer h3 {
     font-size: 1.8rem;
     margin-bottom: 1rem;
-    color: #00bfae;
+    color:  #ff6200;
     font-weight: 700;
-    border-bottom: 2px solid #00bfae;
+    border-bottom: 2px solid  #ff6200;
     padding-bottom: 0.5rem;
 }
 
@@ -298,7 +298,7 @@ footer h3 {
 }
 
 .footer-column ul li a:hover {
-    color: #00bfae;
+    color:  #ff6200;
     transform: translateX(5px);
 }
 
@@ -340,7 +340,7 @@ footer h3 {
 
 .newsletter button {
     padding: 0.75rem 1.5rem;
-    background-color: #00bfae;
+    background-color:  #ff6200;
     border: none;
     border-radius: 0 5px 5px 0;
     color: #ffffff;
@@ -350,7 +350,7 @@ footer h3 {
 }
 
 .newsletter button:hover {
-    background-color: #009e92;
+    background-color:  #ff6200;
     transform: translateY(-2px);
 }
 
