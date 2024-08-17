@@ -9,6 +9,7 @@ body {
     line-height: 1.6;
 }
 
+/* Container Styles */
 .container {
     width: 90%;
     max-width: 1200px;
@@ -16,14 +17,16 @@ body {
     padding: 0 15px;
 }
 
+/* Logo Styles */
 .logo img {
     width: 120px;
     height: 120px;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .logo img:hover {
     transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 /* Header and Navbar Styles */
@@ -31,7 +34,7 @@ header {
     background-color: #1a1a1a;
     color: white;
     padding: 1rem 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -45,8 +48,9 @@ header .container {
 
 header .logo {
     font-size: 2rem;
-    font-weight: bold;
+    font-weight: 700;
     letter-spacing: 2px;
+    color: #ff6200;
 }
 
 nav ul {
@@ -63,29 +67,32 @@ nav ul li a {
     color: white;
     text-decoration: none;
     padding: 0.5rem 1rem;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    font-weight: 500;
     border-radius: 30px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
 
 nav ul li a:hover {
     background-color: #555;
     color: #f4f4f4;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 nav .cta {
     background-color: #ff6200;
-    padding: 0.6rem 1.2rem;
+    padding: 0.8rem 1.6rem;
     border-radius: 30px;
     color: white;
     font-weight: bold;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 nav .cta:hover {
     background-color: #e55b00;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
 }
 
 .menu-toggle {
@@ -96,6 +103,12 @@ nav .cta:hover {
     border-radius: 5px;
     font-size: 1.5rem;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.menu-toggle:hover {
+    background-color: #e55b00;
+    transform: scale(1.05);
 }
 
 /* Hero Section Styles */
@@ -124,8 +137,8 @@ nav .cta:hover {
     line-height: 1.2;
     margin-bottom: 1.5rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: 1.5px;
 }
-
 
 .hero p {
     font-size: 1.5rem;
@@ -142,19 +155,21 @@ nav .cta:hover {
     color: white;
     text-decoration: none;
     font-size: 1.2rem;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
     z-index: 2;
     position: relative;
 }
 
 .hero .cta:hover {
     background-color: #e55b00;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
 }
 
 /* Overview Section Styles */
 .overview {
-    padding: 4rem 0;
+    padding: 4rem 1rem;
     background-color: #ffffff;
 }
 
@@ -191,7 +206,7 @@ nav .cta:hover {
 
 /* Detailed Services Section Styles */
 .detailed-services {
-    padding: 4rem 0;
+    padding: 4rem 1rem;
     background-color: #f9f9f9;
 }
 
@@ -241,19 +256,20 @@ nav .cta:hover {
     border-radius: 30px;
     color: white;
     text-decoration: none;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .detailed-services .service .cta:hover {
     background-color: #e55b00;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
 }
 
 /* Footer Styles */
 footer {
     background-color: #1a1a1a;
     color: white;
-    padding: 3rem 0;
+    padding: 3rem 1rem;
     position: relative;
     overflow: hidden;
 }
@@ -328,47 +344,46 @@ footer h3 {
     border-radius: 5px;
     color: white;
     cursor: pointer;
-    transition: background-color
-    0.3s ease, transform 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.newsletter button
-{
-background-color: #e55b00;
-transform: translateY(-2px);
+.newsletter button:hover {
+    background-color: #e55b00;
+    transform: translateY(-2px);
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-header nav ul {
-display: none;
-flex-direction: column;
-align-items: center;
-width: 100%;
-}
-header nav ul.show {
-    display: flex;
-}
+    header nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    
+    header nav ul.show {
+        display: flex;
+    }
 
-.menu-toggle {
-    display: block;
-}
+    .menu-toggle {
+        display: block;
+    }
 
-.footer-column {
-    flex: 1 0 100%;
-    margin-bottom: 2rem;
-}
+    .footer-column {
+        flex: 1 0 100%;
+        margin-bottom: 2rem;
+    }
 
-.hero h1 {
-    font-size: 2.5rem;
-}
+    .hero h1 {
+        font-size: 2.5rem;
+    }
 
-.hero p {
-    font-size: 1.2rem;
-}
+    .hero p {
+        font-size: 1.2rem;
+    }
 
-.hero .cta {
-    font-size: 1rem;
-    padding: 0.8rem 1.5rem;
-}
+    .hero .cta {
+        font-size: 1rem;
+        padding: 0.8rem 1.5rem;
+    }
 }
