@@ -119,18 +119,20 @@ nav .cta:hover {
 }
 
 .hero h1 {
-    font-size: 4rem;
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
     margin-bottom: 1.5rem;
-    z-index: 2;
-    position: relative;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
+
 .hero p {
-    font-size: 1.8rem;
-    margin-bottom: 2.5rem;
-    z-index: 2;
-    position: relative;
+    font-size: 1.5rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .hero .cta {
