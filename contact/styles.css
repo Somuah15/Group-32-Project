@@ -324,6 +324,29 @@ footer h3 {
     transform: translateY(-2px);
 }
 
+/* Feedback Messages */
+.feedback-message {
+    font-size: 1rem;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+.feedback-message.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.feedback-message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.error-message {
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
     header nav ul {
