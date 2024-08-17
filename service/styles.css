@@ -1,26 +1,40 @@
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
 }
 
 .container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 15px;
 }
-.logo img{
-    width: 100px;
-    height: 100px;
+
+.logo img {
+    width: 120px;
+    height: 120px;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
 }
 
 /* Header and Navbar Styles */
 header {
-    background-color: #333;
+    background-color: #1a1a1a;
     color: white;
     padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 header .container {
@@ -30,14 +44,15 @@ header .container {
 }
 
 header .logo {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: bold;
+    letter-spacing: 2px;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 nav ul li {
@@ -48,26 +63,39 @@ nav ul li a {
     color: white;
     text-decoration: none;
     padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight: 500;
+    border-radius: 30px;
 }
 
 nav ul li a:hover {
     background-color: #555;
-    border-radius: 5px;
+    color: #f4f4f4;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 nav .cta {
-    background-color: #007BFF;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
+    background-color: #ff6200;
+    padding: 0.6rem 1.2rem;
+    border-radius: 30px;
     color: white;
+    font-weight: bold;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 nav .cta:hover {
-    background-color: #0056b3;
+    background-color: #e55b00;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .menu-toggle {
     display: none;
+    background-color: #ff6200;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    cursor: pointer;
 }
 
 /* Hero Section Styles */
@@ -75,93 +103,167 @@ nav .cta:hover {
     background: url('https://i.ibb.co/z88ZYLb/IT-Services-and-06530cae-3536-4056-b872-8726b123dfa2.png') no-repeat center center/cover;
     color: white;
     text-align: center;
-    padding: 4rem 0;
+    padding: 6rem 1rem;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
 }
 
 .hero h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    z-index: 2;
+    position: relative;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 .hero p {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    margin-bottom: 2.5rem;
+    z-index: 2;
+    position: relative;
 }
 
 .hero .cta {
-    background-color: #007BFF;
-    padding: 1rem 2rem;
-    border-radius: 5px;
+    background-color: #ff6200;
+    padding: 1rem 2.5rem;
+    border-radius: 30px;
     color: white;
     text-decoration: none;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    z-index: 2;
+    position: relative;
 }
 
 .hero .cta:hover {
-    background-color: #0056b3;
+    background-color: #e55b00;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Overview Section Styles */
 .overview {
     padding: 4rem 0;
+    background-color: #ffffff;
 }
 
 .overview h2 {
     text-align: center;
     margin-bottom: 2rem;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ff6200;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+}
+
+.overview h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 4px;
+    background-color: #ff6200;
 }
 
 .overview p {
     text-align: center;
-    font-size: 1.2rem;
-    line-height: 1.6;
+    font-size: 1.3rem;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #666;
 }
 
 /* Detailed Services Section Styles */
 .detailed-services {
     padding: 4rem 0;
+    background-color: #f9f9f9;
 }
 
 .detailed-services h2 {
     text-align: center;
     margin-bottom: 2rem;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
 }
 
 .detailed-services .service {
     margin-bottom: 3rem;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.detailed-services .service:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .detailed-services .service h3 {
-    font-size: 1.8rem;
+    font-size: 2rem;
     margin-bottom: 1rem;
+    color: #ff6200;
 }
 
 .detailed-services .service p {
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin-bottom: 1rem;
+    color: #666;
 }
 
 .detailed-services .service ul {
     list-style: disc inside;
     margin-bottom: 1rem;
+    padding-left: 1.5rem;
 }
 
 .detailed-services .service .cta {
-    background-color: #007BFF;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
+    background-color: #ff6200;
+    padding: 0.7rem 1.5rem;
+    border-radius: 30px;
     color: white;
     text-decoration: none;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .detailed-services .service .cta:hover {
-    background-color: #0056b3;
+    background-color: #e55b00;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Footer Styles */
 footer {
-    background-color: #333;
+    background-color: #1a1a1a;
     color: white;
-    padding: 2rem 0;
+    padding: 3rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background-color: #ff6200;
 }
 
 footer .container {
@@ -169,82 +271,102 @@ footer .container {
     justify-content: space-between;
     align-items: flex-start;
     flex-wrap: wrap;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
+    gap: 2rem;
 }
 
 .footer-column {
     flex: 1;
-    margin-right: 2rem;
-    min-width: 200px;
+    min-width: 250px;
 }
 
 footer h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: #ff6200;
 }
 
 .contact-info p {
     margin: 0.5rem 0;
+    font-size: 1rem;
 }
 
 .social-media a {
-    display: block;
-    margin-bottom: 0.5rem;
+    display: inline-block;
+    margin-right: 1rem;
     color: white;
     text-decoration: none;
+    font-size: 1.5rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-media a:hover {
+    color: #ff6200;
+    transform: scale(1.1);
 }
 
 .newsletter form {
     display: flex;
     flex-wrap: wrap;
+    gap: 0.5rem;
 }
 
 .newsletter input[type="email"] {
-    padding: 0.5rem;
+    padding: 0.7rem;
     flex: 2;
     border: 1px solid #ccc;
-    border-radius: 5px 0 0 5px;
+    border-radius: 5px;
     min-width: 150px;
+    margin-bottom: 1rem;
 }
 
 .newsletter button {
-    padding: 0.5rem 1rem;
-    background-color: #007BFF;
+    padding: 0.7rem 1.5rem;
+    background-color: #ff6200;
     border: none;
-    border-radius: 0 5px 5px 0;
+    border-radius: 5px;
     color: white;
     cursor: pointer;
+    transition: background-color
+    0.3s ease, transform 0.3s ease;
 }
 
-.newsletter button:hover {
-    background-color: #0056b3;
+.newsletter button
+{
+background-color: #e55b00;
+transform: translateY(-2px);
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-    header nav ul {
-        display: none;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-    }
+header nav ul {
+display: none;
+flex-direction: column;
+align-items: center;
+width: 100%;
+}
+header nav ul.show {
+    display: flex;
+}
 
-    header nav ul.show {
-        display: flex;
-    }
+.menu-toggle {
+    display: block;
+}
 
-    .menu-toggle {
-        display: block;
-    }
+.footer-column {
+    flex: 1 0 100%;
+    margin-bottom: 2rem;
+}
 
-    .footer-column {
-        flex: 1 0 100%;
-        margin-right: 0;
-        margin-bottom: 1rem;
-    }
+.hero h1 {
+    font-size: 2.5rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+}
+
+.hero .cta {
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+}
 }
