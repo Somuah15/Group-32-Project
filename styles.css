@@ -1,9 +1,12 @@
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: #333;
+    line-height: 1.6;
+    background-color: #f4f4f4;
 }
 
 .container {
@@ -14,9 +17,10 @@ body {
 
 /* Header Styles */
 header {
-    background-color: #333;
+    background-color: #222;
     color: white;
     padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 header .container {
@@ -26,40 +30,42 @@ header .container {
 }
 
 header .logo {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: bold;
+    text-transform: uppercase;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    gap: 1rem;
-}
-
-nav ul li {
-    display: inline;
+    gap: 1.5rem;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
     padding: 0.5rem 1rem;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 nav ul li a:hover {
-    background-color: #555;
+    background-color: #007BFF;
+    color: #fff;
     border-radius: 5px;
 }
 
 nav .cta {
-    background-color: #007BFF;
+    background-color: #28a745;
     padding: 0.5rem 1rem;
     border-radius: 5px;
     color: white;
+    text-transform: uppercase;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 nav .cta:hover {
-    background-color: #0056b3;
+    background-color: #218838;
+    transform: translateY(-2px);
 }
 
 .menu-toggle {
@@ -69,6 +75,11 @@ nav .cta:hover {
     border: none;
     padding: 0.5rem 1rem;
     cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.menu-toggle:hover {
+    background-color: #0056b3;
 }
 
 /* Hero Section Styles */
@@ -76,22 +87,40 @@ nav .cta:hover {
     background: url('https://i.ibb.co/z88ZYLb/IT-Services-and-06530cae-3536-4056-b872-8726b123dfa2.png') no-repeat center center/cover;
     color: white;
     text-align: center;
-    padding: 4rem 0;
+    padding: 5rem 0;
+    position: relative;
+    z-index: 1;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
 }
 
 .hero .container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .hero h1 {
-    font-size: 2.5rem;
-    margin: 0;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 .hero p {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
 }
 
 .hero .cta {
@@ -99,99 +128,175 @@ nav .cta:hover {
     padding: 1rem 2rem;
     border-radius: 5px;
     color: white;
-    margin-top: 1rem;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.hero .cta:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
 }
 
 /* Key Services Styles */
 .key-services {
-    padding: 2rem 0;
+    padding: 4rem 0;
+    background-color: #fff;
     text-align: center;
 }
 
 .key-services h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    color: #007BFF;
 }
 
 .services-grid {
     display: flex;
     gap: 2rem;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .service {
     text-align: center;
+    max-width: 300px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .service img {
     width: 100px;
     height: 100px;
+    margin-bottom: 1rem;
 }
-.logo img{
-    width: 100px;
-    height: 100px;
+
+.service h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #007BFF;
+}
+
+.service p {
+    font-size: 1rem;
+    color: #555;
 }
 
 /* Testimonials Styles */
 .testimonials {
     background-color: #f9f9f9;
-    padding: 2rem 0;
+    padding: 4rem 0;
 }
 
 .testimonials h2 {
     text-align: center;
-    font-size: 2rem;
-    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #333;
 }
 
 .testimonials-grid {
     display: flex;
     gap: 2rem;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .testimonial {
     text-align: center;
     max-width: 300px;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.testimonial:hover {
+    transform: translateY(-5px);
 }
 
 .testimonial img {
     border-radius: 50%;
     width: 80px;
     height: 80px;
+    margin-bottom: 1rem;
+}
+
+.testimonial p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.testimonial h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #333;
 }
 
 /* Blog Posts Styles */
 .blog-posts {
-    padding: 2rem 0;
+    padding: 4rem 0;
+    background-color: #fff;
     text-align: center;
 }
 
 .blog-posts h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    color: #007BFF;
 }
 
 .posts-grid {
     display: flex;
     gap: 2rem;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .post {
     max-width: 300px;
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.post:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .post img {
     width: 100%;
     height: auto;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.post h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.post p {
+    font-size: 1rem;
+    color: #666;
 }
 
 /* Footer Styles */
 footer {
-    background-color: #333;
+    background-color: #222;
     color: white;
-    padding: 2rem 0;
+    padding: 3rem 0;
 }
 
 footer .container {
@@ -214,19 +319,27 @@ footer .container {
 }
 
 footer h3 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     margin-bottom: 1rem;
+    color: #fff;
 }
 
 .contact-info p {
     margin: 0.5rem 0;
+    font-size: 1rem;
 }
 
 .social-media a {
     display: block;
     margin-bottom: 0.5rem;
-    color: white;
+    color: #fff;
     text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.social-media a:hover {
+    color: #007BFF;
 }
 
 .newsletter form {
@@ -235,7 +348,7 @@ footer h3 {
 }
 
 .newsletter input[type="email"] {
-    padding: 0.5rem;
+    padding: 0.8rem;
     flex: 2;
     border: 1px solid #ccc;
     border-radius: 5px 0 0 5px;
@@ -243,38 +356,60 @@ footer h3 {
 }
 
 .newsletter button {
-    padding: 0.5rem 1rem;
+    padding: 0.8rem 1.5rem;
     background-color: #007BFF;
     border: none;
     border-radius: 0 5px 5px 0;
     color: white;
     cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 .newsletter button:hover {
     background-color: #0056b3;
+    transform: translateY(-2px);
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
     header nav ul {
         display: none;
         flex-direction: column;
         align-items: center;
         width: 100%;
     }
-
+    
     header nav ul.show {
         display: flex;
     }
-
+    
     .menu-toggle {
         display: block;
     }
-
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero p {
+        font-size: 1.2rem;
+    }
+    
+    .services-grid,
+    .testimonials-grid,
+    .posts-grid {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
     .footer-column {
         flex: 1 0 100%;
         margin-right: 0;
         margin-bottom: 1rem;
     }
-}
+}    
