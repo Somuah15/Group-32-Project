@@ -51,14 +51,14 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #007BFF;
+    background-color: #ff6200;
     color: #fff;
     border-radius: 5px;
     text-decoration: underline; /* Underline effect on hover */
 }
 
 nav .cta {
-    background: linear-gradient(45deg, #007BFF, #0056b3);
+    background: linear-gradient(45deg, #ff6200, #e06315);
     padding: 0.5rem 1rem;
     border-radius: 5px;
     color: white;
@@ -68,13 +68,13 @@ nav .cta {
 }
 
 nav .cta:hover {
-    background: linear-gradient(45deg, #0056b3, #007BFF);
+    background: linear-gradient(45deg, #b94a05, #b14909);
     transform: translateY(-2px) scale(1.05);
 }
 
 .menu-toggle {
     display: none;
-    background-color: #007BFF;
+    background-color: #ff6200;
     color: white;
     border: none;
     padding: 0.5rem 1rem;
@@ -83,7 +83,7 @@ nav .cta:hover {
 }
 
 .menu-toggle:hover {
-    background-color: #0056b3;
+    background-color:#ff6200;
 }
 
 /* Hero Section Styles */
@@ -136,7 +136,7 @@ nav .cta:hover {
 }
 
 .hero .cta {
-    background-color: #28a745;
+    background-color:#ff6200;
     padding: 1rem 2rem;
     border-radius: 5px;
     color: white;
@@ -146,7 +146,7 @@ nav .cta:hover {
 }
 
 .hero .cta:hover {
-    background-color: #218838;
+    background-color: #e6732b;
     transform: translateY(-2px);
 }
 
@@ -161,7 +161,7 @@ nav .cta:hover {
     font-size: 2.5rem;
     margin-bottom: 2rem;
     text-transform: uppercase;
-    color: #007BFF;
+    color: #ff6200;
 }
 
 .services-grid {
@@ -200,6 +200,7 @@ nav .cta:hover {
     color: #007BFF;
     background: linear-gradient(45deg, #007BFF, #28a745);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent; /* Gradient text */
 }
 
