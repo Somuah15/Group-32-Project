@@ -33,7 +33,7 @@ header .container {
 }
 
 header .logo {
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: 700;
     color: #00bfae;
     text-transform: uppercase;
@@ -356,80 +356,57 @@ footer h3 {
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-    footer .container {
+    header .container {
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
     }
 
-    .footer-column {
-        margin-bottom: 1rem;
-        text-align: center;
-    }
-}
-
-.contact-info p {
-    margin: 0.75rem 0;
-}
-
-.social-media a {
-    display: block;
-    margin-bottom: 0.75rem;
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 1.2rem;
-    transition: color 0.3s, transform 0.3s;
-}
-
-.social-media a:hover {
-    color: #00bfae;
-    transform: translateX(5px);
-}
-
-
-
-/* Feedback Messages */
-.feedback-message {
-    font-size: 1rem;
-    margin-top: 1rem;
-    padding: 0.5rem;
-    border-radius: 5px;
-}
-
-.feedback-message.success {
-    background-color: #d4edda;
-    color: #155724;
-}
-
-.feedback-message.error {
-    background-color: #f8d7da;
-    color: #721c24;
-}
-
-.error-message {
-    font-size: 0.875rem;
-    margin-top: 0.5rem;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
     header nav ul {
         display: none;
+       
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         width: 100%;
+        }
+        header nav ul.show {
+            display: flex;
+        }
+        
+        .menu-toggle {
+            display: block;
+        }
+        
+        .footer-column {
+            flex: 1 0 100%;
+            margin-bottom: 1rem;
+        }
+        
+        .social-media a {
+            display: block;
+            margin-bottom: 0.75rem;
+            font-size: 1.2rem;
+        }
     }
 
-    header nav ul.show {
-        display: flex;
+    /* Feedback Messages */
+    .feedback-message {
+    font-size: 1rem;
+    margin-top: 1rem;
+    padding: 0.75rem;
+    border-radius: 5px;
     }
-
-    .menu-toggle {
-        display: block;
+    
+    .feedback-message.success {
+    background-color: #d4edda;
+    color: #155724;
     }
-
-    .footer-column {
-        flex: 1 0 100%;
-        margin-right: 0;
-        margin-bottom: 1rem;
+    
+    .feedback-message.error {
+    background-color: #f8d7da;
+    color: #721c24;
     }
-}
+    
+    .error-message {
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+    }        
