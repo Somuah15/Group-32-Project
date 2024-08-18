@@ -19,7 +19,7 @@ body {
 header {
     background-color: #333;
     color: #fff;
-    padding: 1rem 0;
+    padding: 0.75rem 0; /* Reduced padding */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     position: relative;
     z-index: 1000;
@@ -29,34 +29,61 @@ header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap; /* Ensure items wrap on smaller screens */
 }
 
 header .logo img {
-    width: 80px; /* Smaller size */
-    height: 80px; /* Make it square */
-    border-radius: 50%; /* Make it curvy */
+    width: 70px; /* Slightly smaller */
+    height: 70px;
+    border-radius: 50%;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Navbar Styles */
+nav {
+    flex: 1; /* Allow the nav to take up available space */
+    text-align: right; /* Align items to the right */
+}
 
 nav ul {
     list-style: none;
     display: flex;
-    gap: 1.5rem;
-}
-
-nav ul li {
-    display: inline;
+    justify-content: flex-end; /* Ensure items are right-aligned */
+    gap: 1rem; /* Reduced gap for better fitting */
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
-    padding: 0.75rem 1.25rem;
+    padding: 0.5rem 1rem; /* Reduced padding */
     border-radius: 5px;
     font-weight: 500;
     transition: background-color 0.3s, color 0.3s, transform 0.3s;
 }
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        align-items: center; /* Align items center on small screens */
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    nav ul.show {
+        display: flex;
+    }
+    
+    .menu-toggle {
+        display: block;
+        margin-left: auto; /* Ensure button aligns right */
+    }
+}
+
 
 nav ul li a:hover,
 nav ul li a.active {
