@@ -123,7 +123,7 @@ nav ul li a:hover::after {
 
 nav ul li a:hover,
 nav ul li a.active {
-    background-color: #ff6200;
+    background-color: #555;
     color: #fff;
     transform: translateY(-2px);
 }

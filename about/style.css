@@ -58,7 +58,7 @@ nav ul li a {
 
 nav ul li a:hover {
     background-color: #333;
-    color: #ff6f61;
+    color: #555;
     transform: translateY(-2px) scale(1.05);
 }
 
@@ -74,7 +74,7 @@ nav .cta {
 }
 
 nav .cta:hover {
-    background-color: #e55b4f;
+    background-color:#555 ;
     transform: translateY(-2px);
 }
 
@@ -89,7 +89,7 @@ nav .cta:hover {
 }
 
 .menu-toggle:hover {
-    background-color: #e55b4f;
+    background-color: #555;
 }
 
 .logo img {
