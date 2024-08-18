@@ -37,16 +37,17 @@ header .container {
     flex-wrap: wrap; /* Ensure items wrap on smaller screens */
 }
 
+/* Logo Styles */
 header .logo img {
-    width: 70px; /* Slightly smaller */
-    height: 70px;
+    width: 50px; /* Much smaller width */
+    height: 50px; /* Much smaller height */
     border-radius: 50%;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 header .logo img:hover {
     transform: scale(1.1) rotate(5deg);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adjusted shadow for smaller logo */
 }
 
 /* Navbar Styles */
