@@ -22,14 +22,14 @@ header {
     background-color: #1a1a1a;
     color: white;
     padding: 1rem 0;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     position: relative;
-    z-index: 1000; /* Ensure it stays on top */
+    z-index: 1000;
 }
 
 header .container {
     display: flex;
-    justify-content: space-between; /* Space between logo and nav */
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -42,27 +42,43 @@ header .logo img:hover {
     transform: rotate(360deg);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
 }
+
+/* Navbar Styles */
+nav {
+    display: flex;
+    align-items: center;
+}
+
 nav ul {
     list-style: none;
     display: flex;
     gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    position: relative;
+    border-radius: 25px; /* Curvy effect */
+    overflow: hidden;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
     padding: 0.5rem 1rem;
-    border-radius: 5px;
-    background: rgba(0, 0, 0, 0.5); /* Transparent dark background for readability */
+    border-radius: 25px; /* Curvy effect for links */
+    background: rgba(0, 0, 0, 0.5);
     transition: background-color 0.3s, color 0.3s, text-shadow 0.3s;
 }
 
 nav ul li a:hover {
-    background-color: rgba(255, 98, 0, 0.8); /* Orange with some transparency */
+    background-color: rgba(255, 98, 0, 0.8);
     color: #fff;
-    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Subtle glow effect */
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
+/* Call-to-Action Button Styles */
 nav .cta {
     background: linear-gradient(45deg, #ff6200, #e06315);
     padding: 0.7rem 1.5rem;
@@ -80,11 +96,34 @@ nav .cta:hover {
     transform: translateY(-3px) scale(1.05);
 }
 
-
 /* Menu Toggle Button */
 .menu-toggle {
     display: none;
+    background-color: #1a1a1a;
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    border-radius: 25px; /* Curvy effect */
 }
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0;
+        display: none;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+}
+
 /* Hero Section Styles */
 .hero {
     background: url('https://i.ibb.co/z88ZYLb/IT-Services-and-06530cae-3536-4056-b872-8726b123dfa2.png') no-repeat center center;
