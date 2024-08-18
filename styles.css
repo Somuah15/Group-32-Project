@@ -19,10 +19,10 @@ body {
 
 /* Header Styles */
 header {
-    background-color: #1a1a1a;
+    background-color:#4f4b4b;
     color: white;
     padding: 1rem 0;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     position: relative;
     z-index: 1000;
 }
@@ -99,7 +99,7 @@ nav .cta:hover {
 /* Menu Toggle Button */
 .menu-toggle {
     display: none;
-    background-color: #1a1a1a;
+    background-color: #444;
     color: white;
     border: none;
     padding: 1rem;
@@ -365,7 +365,7 @@ nav .cta:hover {
 
 /* Footer Styles */
 footer {
-    background-color: #1a1a1a; /* Darker footer background */
+    background-color:#363333; /* Darker footer background */
     color: white;
     padding: 2rem 0; /* Enhanced padding */
     text-align: center;
