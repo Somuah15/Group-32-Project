@@ -17,13 +17,14 @@ body {
 
 /* Header Styles */
 header {
-    background-color: #333;
+    background-color:  #444;
     color: #fff;
     padding: 0.75rem 0; /* Reduced padding */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     position: relative;
     z-index: 1000;
     transition: background-color 0.3s ease;
+    border-radius: 0 0 20px 20px; /* Add border-radius to header */
 }
 
 header:hover {
@@ -61,13 +62,20 @@ nav ul {
     display: flex;
     justify-content: flex-end; /* Ensure items are right-aligned */
     gap: 1rem; /* Reduced gap for better fitting */
+    border-radius: 20px; /* Add border-radius to nav */
+    overflow: hidden; /* Ensure no overflow beyond border-radius */
+    background-color: #444; /* Optional: background color to enhance the curvy effect */
+}
+
+nav ul li {
+    border-radius: 20px; /* Add border-radius to each list item */
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
     padding: 0.5rem 1rem; /* Reduced padding */
-    border-radius: 5px;
+    border-radius: 20px; /* Curved edges for each link */
     font-weight: 500;
     transition: background-color 0.3s, color 0.3s, transform 0.3s;
     position: relative;
@@ -93,12 +101,13 @@ nav ul li a:hover::after {
 @media (max-width: 768px) {
     header .container {
         flex-direction: column;
-        align-items: center; /* Align items center on small screens */
+        align-items: center;
     }
 
     nav ul {
         display: none;
         flex-direction: column;
+        align-items: flex-start;
         width: 100%;
     }
     
@@ -406,6 +415,7 @@ footer h3 {
     
     .menu-toggle {
         display: block;
+        margin-left: auto; /* Ensure button aligns right */
     }
     
     .footer-column {
