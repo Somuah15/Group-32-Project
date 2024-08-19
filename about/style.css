@@ -56,9 +56,11 @@ nav ul li a {
     font-weight: 500;
 }
 
+
 nav ul li a:hover {
-    background-color: #333;
-    color: #424141;
+    background-color: transparent;
+    color: #ff6f61;
+    border-bottom: 2px solid #ff6f61; /* Underline on hover */
     transform: translateY(-2px) scale(1.05);
 }
 
