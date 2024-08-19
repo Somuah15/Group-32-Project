@@ -63,13 +63,13 @@ nav ul li a:hover {
 }
 
 nav .cta {
-    background-color: #ff6f61;
+    background: linear-gradient(45deg, #ff6f61, #e55b4f); /* Gradient background */
     padding: 0.75rem 1.5rem;
     border-radius: 5px;
     color: white;
     text-transform: uppercase;
     font-weight: 600;
-    transition: background-color 0.3s, transform 0.3s;
+    transition: background 0.3s, transform 0.3s;
     animation: pulse 2s infinite;
 }
 
