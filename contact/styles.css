@@ -53,32 +53,38 @@ header .logo img:hover {
 
 /* Navbar Styles */
 nav {
-    flex: 1; /* Allow the nav to take up available space */
-    text-align: right; /* Align items to the right */
+    flex: 1;
+    text-align: right;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: flex-end; /* Ensure items are right-aligned */
-    gap: 1rem; /* Reduced gap for better fitting */
-    border-radius: 20px; /* Add border-radius to nav */
-    overflow: hidden; /* Ensure no overflow beyond border-radius */
-    background-color: #1b1b1b; /* Optional: background color to enhance the curvy effect */
+    justify-content: flex-end;
+    gap: 0.8rem; /* Adjusted gap for better alignment */
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: transparent; /* Transparent background for a cleaner look */
+    transition: background-color 0.3s ease;
+}
+
+nav ul:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Light background on hover */
 }
 
 nav ul li {
-    border-radius: 20px; /* Add border-radius to each list item */
+    border-radius: 12px;
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
-    padding: 0.5rem 1rem; /* Reduced padding */
-    border-radius: 20px; /* Curved edges for each link */
+    padding: 0.5rem 1rem;
+    border-radius: 12px;
     font-weight: 500;
     transition: background-color 0.3s, color 0.3s, transform 0.3s;
     position: relative;
+    display: inline-block; /* Ensure proper padding and spacing */
 }
 
 nav ul li a::after {
@@ -97,54 +103,56 @@ nav ul li a:hover::after {
     left: 0;
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-    header .container {
-        flex-direction: column;
-        align-items: center;
-    }
+nav ul li a:hover,
+nav ul li a.active {
+    background-color: #555; /* Consistent hover background */
+    color: #fff;
+    transform: translateY(-2px); /* Subtle elevation on hover */
+}
 
+/* Responsive Navbar Styles */
+@media (max-width: 768px) {
     nav ul {
         display: none;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         width: 100%;
     }
     
     nav ul.show {
         display: flex;
+        background-color: #1b1b1b; /* Background color when menu is toggled */
+        padding: 1rem 0;
+    }
+    
+    nav ul li {
+        width: 100%;
+        text-align: center; /* Centered text on mobile */
+        margin-bottom: 0.5rem;
+    }
+    
+    nav ul li a {
+        padding: 0.75rem 1.5rem; /* Increased padding for touch devices */
     }
     
     .menu-toggle {
         display: block;
-        margin-left: auto; /* Ensure button aligns right */
+        margin-left: auto;
+        background-color: #ff6200;
+        color: #fff;
+        padding: 0.75rem 1.5rem;
+        cursor: pointer;
+        font-size: 1.5rem;
+        border-radius: 5px;
+        transition: background-color 0.3s, transform 0.3s;
+    }
+    
+    .menu-toggle:hover {
+        background-color: #d85e13;
+        transform: scale(1.05);
     }
 }
 
-nav ul li a:hover,
-nav ul li a.active {
-    background-color: #555;
-    color: #fff;
-    transform: translateY(-2px);
-}
-
-/* Menu Toggle Styles */
-.menu-toggle {
-    display: none;
-    background-color: #ff6200;
-    color: #fff;
-    border: none;
-    padding: 0.75rem 1.5rem;
-    cursor: pointer;
-    font-size: 1.5rem;
-    border-radius: 5px;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-.menu-toggle:hover {
-    background-color: #d85e13;
-    transform: scale(1.05);
-}
 
 /* Main Section Styles */
 main {
