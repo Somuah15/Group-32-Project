@@ -74,8 +74,8 @@ nav .cta {
 }
 
 nav .cta:hover {
-    background-color:#555 ;
-    transform: translateY(-2px);
+    background: linear-gradient(45deg, #e55b4f, #ff6f61); /* Refined hover effect */
+    transform: translateY(-2px) scale(1.05);
 }
 
 .menu-toggle {
