@@ -76,6 +76,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
         setTimeout(() => {
             feedback.remove();
-        }, 5000); // Remove feedback message after 5 seconds
+        }, 5000); // Remove feedback message after 5 seconds (5000ms)
     }
 });
